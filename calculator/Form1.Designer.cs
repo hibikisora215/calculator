@@ -37,9 +37,9 @@
             System.Windows.Forms.Button btn7;
             System.Windows.Forms.Button btn8;
             System.Windows.Forms.Button btn9;
-            System.Windows.Forms.Button button5;
+            System.Windows.Forms.Button btnSign;
             System.Windows.Forms.Button btn0;
-            System.Windows.Forms.Button button7;
+            System.Windows.Forms.Button btnPoint;
             System.Windows.Forms.Button btnEqual;
             System.Windows.Forms.Button btnPlus;
             System.Windows.Forms.Button btnMinus;
@@ -57,9 +57,9 @@
             btn7 = new System.Windows.Forms.Button();
             btn8 = new System.Windows.Forms.Button();
             btn9 = new System.Windows.Forms.Button();
-            button5 = new System.Windows.Forms.Button();
+            btnSign = new System.Windows.Forms.Button();
             btn0 = new System.Windows.Forms.Button();
-            button7 = new System.Windows.Forms.Button();
+            btnPoint = new System.Windows.Forms.Button();
             btnEqual = new System.Windows.Forms.Button();
             btnPlus = new System.Windows.Forms.Button();
             btnMinus = new System.Windows.Forms.Button();
@@ -77,6 +77,7 @@
             btn1.TabIndex = 0;
             btn1.Text = "1";
             btn1.UseVisualStyleBackColor = true;
+            btn1.Click += new System.EventHandler(this.numBtnClick);
             // 
             // btn2
             // 
@@ -87,6 +88,7 @@
             btn2.TabIndex = 1;
             btn2.Text = "2";
             btn2.UseVisualStyleBackColor = true;
+            btn2.Click += new System.EventHandler(this.numBtnClick);
             // 
             // btn3
             // 
@@ -97,6 +99,7 @@
             btn3.TabIndex = 2;
             btn3.Text = "3";
             btn3.UseVisualStyleBackColor = true;
+            btn3.Click += new System.EventHandler(this.numBtnClick);
             // 
             // btn4
             // 
@@ -107,6 +110,7 @@
             btn4.TabIndex = 3;
             btn4.Text = "4";
             btn4.UseVisualStyleBackColor = true;
+            btn4.Click += new System.EventHandler(this.numBtnClick);
             // 
             // btn5
             // 
@@ -117,6 +121,7 @@
             btn5.TabIndex = 4;
             btn5.Text = "5";
             btn5.UseVisualStyleBackColor = true;
+            btn5.Click += new System.EventHandler(this.numBtnClick);
             // 
             // btn6
             // 
@@ -127,6 +132,7 @@
             btn6.TabIndex = 5;
             btn6.Text = "6";
             btn6.UseVisualStyleBackColor = true;
+            btn6.Click += new System.EventHandler(this.numBtnClick);
             // 
             // btn7
             // 
@@ -137,6 +143,7 @@
             btn7.TabIndex = 6;
             btn7.Text = "7";
             btn7.UseVisualStyleBackColor = true;
+            btn7.Click += new System.EventHandler(this.numBtnClick);
             // 
             // btn8
             // 
@@ -147,7 +154,7 @@
             btn8.TabIndex = 7;
             btn8.Text = "8";
             btn8.UseVisualStyleBackColor = true;
-            btn8.Click += new System.EventHandler(this.button3_Click);
+            btn8.Click += new System.EventHandler(this.numBtnClick);
             // 
             // btn9
             // 
@@ -158,16 +165,17 @@
             btn9.TabIndex = 8;
             btn9.Text = "9";
             btn9.UseVisualStyleBackColor = true;
+            btn9.Click += new System.EventHandler(this.numBtnClick);
             // 
-            // button5
+            // btnSign
             // 
-            button5.Font = new System.Drawing.Font("MS UI Gothic", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            button5.Location = new System.Drawing.Point(32, 368);
-            button5.Name = "button5";
-            button5.Size = new System.Drawing.Size(50, 50);
-            button5.TabIndex = 9;
-            button5.Text = "5";
-            button5.UseVisualStyleBackColor = true;
+            btnSign.Font = new System.Drawing.Font("MS UI Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            btnSign.Location = new System.Drawing.Point(32, 368);
+            btnSign.Name = "btnSign";
+            btnSign.Size = new System.Drawing.Size(50, 50);
+            btnSign.TabIndex = 9;
+            btnSign.Text = "+/-";
+            btnSign.UseVisualStyleBackColor = true;
             // 
             // btn0
             // 
@@ -178,38 +186,18 @@
             btn0.TabIndex = 10;
             btn0.Text = "0";
             btn0.UseVisualStyleBackColor = true;
+            btn0.Click += new System.EventHandler(this.numBtnClick);
             // 
-            // button7
+            // btnPoint
             // 
-            button7.Font = new System.Drawing.Font("MS UI Gothic", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            button7.Location = new System.Drawing.Point(144, 368);
-            button7.Name = "button7";
-            button7.Size = new System.Drawing.Size(50, 50);
-            button7.TabIndex = 11;
-            button7.Text = "5";
-            button7.UseVisualStyleBackColor = true;
-            // 
-            // textEquation
-            // 
-            this.textEquation.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.textEquation.Font = new System.Drawing.Font("MS UI Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.textEquation.ForeColor = System.Drawing.Color.White;
-            this.textEquation.Location = new System.Drawing.Point(32, 26);
-            this.textEquation.Multiline = true;
-            this.textEquation.Name = "textEquation";
-            this.textEquation.Size = new System.Drawing.Size(301, 76);
-            this.textEquation.TabIndex = 12;
-            this.textEquation.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // textAnswer
-            // 
-            this.textAnswer.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.textAnswer.Font = new System.Drawing.Font("MS UI Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.textAnswer.ForeColor = System.Drawing.Color.White;
-            this.textAnswer.Location = new System.Drawing.Point(32, 108);
-            this.textAnswer.Name = "textAnswer";
-            this.textAnswer.Size = new System.Drawing.Size(301, 26);
-            this.textAnswer.TabIndex = 13;
+            btnPoint.Font = new System.Drawing.Font("MS UI Gothic", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            btnPoint.Location = new System.Drawing.Point(144, 368);
+            btnPoint.Name = "btnPoint";
+            btnPoint.Size = new System.Drawing.Size(50, 50);
+            btnPoint.TabIndex = 11;
+            btnPoint.Text = ".";
+            btnPoint.UseVisualStyleBackColor = true;
+            btnPoint.Click += new System.EventHandler(this.numBtnClick);
             // 
             // btnEqual
             // 
@@ -270,6 +258,31 @@
             btnClear.TabIndex = 19;
             btnClear.Text = "C";
             btnClear.UseVisualStyleBackColor = true;
+            btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
+            // textEquation
+            // 
+            this.textEquation.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.textEquation.Font = new System.Drawing.Font("MS UI Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.textEquation.ForeColor = System.Drawing.Color.White;
+            this.textEquation.Location = new System.Drawing.Point(32, 26);
+            this.textEquation.Multiline = true;
+            this.textEquation.Name = "textEquation";
+            this.textEquation.Size = new System.Drawing.Size(301, 76);
+            this.textEquation.TabIndex = 12;
+            this.textEquation.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.textEquation.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // textAnswer
+            // 
+            this.textAnswer.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.textAnswer.Font = new System.Drawing.Font("MS UI Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.textAnswer.ForeColor = System.Drawing.Color.White;
+            this.textAnswer.Location = new System.Drawing.Point(32, 108);
+            this.textAnswer.Name = "textAnswer";
+            this.textAnswer.Size = new System.Drawing.Size(301, 26);
+            this.textAnswer.TabIndex = 13;
+            this.textAnswer.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // Form1
             // 
@@ -285,9 +298,9 @@
             this.Controls.Add(btnEqual);
             this.Controls.Add(this.textAnswer);
             this.Controls.Add(this.textEquation);
-            this.Controls.Add(button7);
+            this.Controls.Add(btnPoint);
             this.Controls.Add(btn0);
-            this.Controls.Add(button5);
+            this.Controls.Add(btnSign);
             this.Controls.Add(btn9);
             this.Controls.Add(btn8);
             this.Controls.Add(btn7);
@@ -299,6 +312,7 @@
             this.Controls.Add(btn1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
