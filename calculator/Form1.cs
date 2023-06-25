@@ -39,6 +39,19 @@ namespace calculator
             initializeAnswer();
         }
 
+        private void dotButton_Click(object sender, EventArgs e)
+        {
+            if (strAnswer.Contains("."))
+            {
+                ;
+            }
+            else
+            {
+                strAnswer += ".";
+                textAnswer.Text = strAnswer;
+            }
+        }
+
         // 数字ボタン押下時の共通処理。ボタン上の数字を追記する。
         private void numBtnClick(object sender, EventArgs e)
         {
