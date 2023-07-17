@@ -46,6 +46,7 @@
             System.Windows.Forms.Button btnTimes;
             System.Windows.Forms.Button btnDivide;
             System.Windows.Forms.Button btnClear;
+            System.Windows.Forms.Button btnCE;
             this.textEquation = new System.Windows.Forms.TextBox();
             this.textAnswer = new System.Windows.Forms.TextBox();
             btn1 = new System.Windows.Forms.Button();
@@ -66,6 +67,7 @@
             btnTimes = new System.Windows.Forms.Button();
             btnDivide = new System.Windows.Forms.Button();
             btnClear = new System.Windows.Forms.Button();
+            btnCE = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn1
@@ -218,6 +220,7 @@
             btnPlus.TabIndex = 15;
             btnPlus.Text = "+";
             btnPlus.UseVisualStyleBackColor = true;
+            btnPlus.Click += new System.EventHandler(this.Operators_Click);
             // 
             // btnMinus
             // 
@@ -228,6 +231,7 @@
             btnMinus.TabIndex = 16;
             btnMinus.Text = "-";
             btnMinus.UseVisualStyleBackColor = true;
+            btnMinus.Click += new System.EventHandler(this.Operators_Click);
             // 
             // btnTimes
             // 
@@ -238,21 +242,23 @@
             btnTimes.TabIndex = 17;
             btnTimes.Text = "×";
             btnTimes.UseVisualStyleBackColor = true;
+            btnTimes.Click += new System.EventHandler(this.Operators_Click);
             // 
             // btnDivide
             // 
             btnDivide.Font = new System.Drawing.Font("MS UI Gothic", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            btnDivide.Location = new System.Drawing.Point(256, 200);
+            btnDivide.Location = new System.Drawing.Point(200, 144);
             btnDivide.Name = "btnDivide";
             btnDivide.Size = new System.Drawing.Size(50, 50);
             btnDivide.TabIndex = 18;
             btnDivide.Text = "÷";
             btnDivide.UseVisualStyleBackColor = true;
+            btnDivide.Click += new System.EventHandler(this.Operators_Click);
             // 
             // btnClear
             // 
             btnClear.Font = new System.Drawing.Font("MS UI Gothic", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            btnClear.Location = new System.Drawing.Point(88, 144);
+            btnClear.Location = new System.Drawing.Point(144, 144);
             btnClear.Name = "btnClear";
             btnClear.Size = new System.Drawing.Size(50, 50);
             btnClear.TabIndex = 19;
@@ -284,12 +290,24 @@
             this.textAnswer.TabIndex = 13;
             this.textAnswer.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
+            // btnCE
+            // 
+            btnCE.Font = new System.Drawing.Font("MS UI Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            btnCE.Location = new System.Drawing.Point(88, 144);
+            btnCE.Name = "btnCE";
+            btnCE.Size = new System.Drawing.Size(50, 50);
+            btnCE.TabIndex = 20;
+            btnCE.Text = "CE";
+            btnCE.UseVisualStyleBackColor = true;
+            btnCE.Click += new System.EventHandler(this.btnCE_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(367, 450);
+            this.Controls.Add(btnCE);
             this.Controls.Add(btnClear);
             this.Controls.Add(btnDivide);
             this.Controls.Add(btnTimes);
